@@ -1033,16 +1033,12 @@ input:checked + .toggle-bg {
   z-index: 40;
 }
 
-.order-1 {
-  order: 1;
+.order-last {
+  order: 9999;
 }
 
 .order-first {
   order: -9999;
-}
-
-.order-last {
-  order: 9999;
 }
 
 .col-span-2 {
@@ -1224,10 +1220,6 @@ input:checked + .toggle-bg {
 
 .h-4 {
   height: 1rem;
-}
-
-.h-28 {
-  height: 7rem;
 }
 
 .max-h-80 {
@@ -1414,12 +1406,12 @@ input:checked + .toggle-bg {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1583,6 +1575,11 @@ input:checked + .toggle-bg {
   background-color: transparent;
 }
 
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 30 30 / var(--tw-bg-opacity));
+}
+
 .bg-primary-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(2 140 150 / var(--tw-bg-opacity));
@@ -1619,11 +1616,6 @@ input:checked + .toggle-bg {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.object-top {
-  -o-object-position: top;
-     object-position: top;
 }
 
 .p-2 {
@@ -1737,18 +1729,6 @@ input:checked + .toggle-bg {
 
 .text-center {
   text-align: center;
-}
-
-.text-start {
-  text-align: start;
-}
-
-.align-top {
-  vertical-align: top;
-}
-
-.align-text-top {
-  vertical-align: text-top;
 }
 
 .text-sm {
@@ -1991,6 +1971,11 @@ input:checked + .toggle-bg {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(155 28 28 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-primary-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(1 126 135 / var(--tw-bg-opacity));
@@ -2082,14 +2067,19 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity));
 }
 
-.focus\:ring-primary-600:focus {
+.focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(2 140 150 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(248 180 180 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-primary-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(78 185 192 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-primary-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(2 140 150 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-blue-300:focus {
@@ -2129,6 +2119,11 @@ input:checked + .toggle-bg {
 .dark .dark\:bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 36 36 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:bg-gray-700 {
@@ -2219,6 +2214,11 @@ input:checked + .toggle-bg {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 30 30 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
@@ -2269,9 +2269,9 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
 }
 
-.dark .dark\:focus\:ring-primary-500:focus {
+.dark .dark\:focus\:ring-red-800:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(18 151 161 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(155 28 28 / var(--tw-ring-opacity));
 }
 
 .dark .dark\:focus\:ring-primary-900:focus {
@@ -2279,15 +2279,12 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(1 98 105 / var(--tw-ring-opacity));
 }
 
+.dark .dark\:focus\:ring-primary-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(18 151 161 / var(--tw-ring-opacity));
+}
+
 @media (min-width: 640px) {
-  .sm\:order-last {
-    order: 9999;
-  }
-
-  .sm\:order-first {
-    order: -9999;
-  }
-
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -2317,12 +2314,12 @@ input:checked + .toggle-bg {
     width: auto;
   }
 
-  .sm\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .sm\:items-center {
@@ -2388,16 +2385,12 @@ input:checked + .toggle-bg {
     left: 0px;
   }
 
-  .md\:order-3 {
-    order: 3;
+  .md\:order-first {
+    order: -9999;
   }
 
   .md\:order-last {
     order: 9999;
-  }
-
-  .md\:order-first {
-    order: -9999;
   }
 
   .md\:mb-0 {
@@ -2486,14 +2479,6 @@ input:checked + .toggle-bg {
 
   .lg\:order-1 {
     order: 1;
-  }
-
-  .lg\:order-first {
-    order: -9999;
-  }
-
-  .lg\:order-last {
-    order: 9999;
   }
 
   .lg\:col-span-7 {
